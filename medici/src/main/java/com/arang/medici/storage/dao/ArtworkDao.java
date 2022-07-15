@@ -28,10 +28,6 @@ public class ArtworkDao {
 			try {
 				con = dataSource.getConnection();
 				pstmt = con.prepareStatement(sql);
-				
-				
-				
-				
 				pstmt.setString(1, artwork.getArtworkNum());
 				pstmt.setString(2, artwork.getStorage());
 				pstmt.setString(3, artwork.getStartPeriod());
@@ -46,7 +42,7 @@ public class ArtworkDao {
 		}
 	}
 	
-	public List<Artwork> findArtwork() {
+	public List<Artwork> findAllArtwork() {
 		String sql = "SELECT * FROM Artworks";
 		List<Artwork> artworkList = new ArrayList<Artwork>();
 		try {

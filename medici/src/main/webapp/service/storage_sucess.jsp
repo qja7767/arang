@@ -17,8 +17,17 @@ ${wallet.sucessMsg}<br>
 보관 예약 날짜 : ${artwork.startPeriod} ~ ${artwork.endPeriod}<br>
 배송서비스 유/무 : ${artwork.dbService}
 
+  <table width="800" cellpadding="0" cellspacing="0" border=1>
+  	<!-- 제목 -->
+  	<tr>
+  		<td align="center" width=100>작품코드</td>
+  		<td align="center" width=100>유저아이디</td>
+  		<td align="center" width=350>보관장소</td>
+  		<td align="center" width=100>보관시작일</td>
+  		<td align="center" width=100>보관종료일</td>
+  		<td align="center" width=100>배송 서비스 유/무</td>  		
+  	</tr>
 
-
-
+  </table>
 </body>
 </html>

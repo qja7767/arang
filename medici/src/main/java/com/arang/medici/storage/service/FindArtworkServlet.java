@@ -23,7 +23,7 @@ public class FindArtworkServlet extends HttpServlet {
 		
 		ArtworkService artworkService = ArtworkService.getInstance();
 		artworkService = new ArtworkService(new ArtworkDao());
-		List<Artwork> artworkList = artworkService.findArtwork();
+		List<Artwork> artworkList = artworkService.findAllArtwork();
 		request.setAttribute("artworkList", artworkList);
 		
 		RequestDispatcher dispatcher = null;

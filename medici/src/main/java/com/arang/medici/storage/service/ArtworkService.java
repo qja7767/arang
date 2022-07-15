@@ -32,8 +32,8 @@ public class ArtworkService {
 		artworkDao.addArtwork(artwork);
 	}
 
-	public List<Artwork> findArtwork() {
-		return artworkDao.findArtwork();
+	public List<Artwork> findAllArtwork() {
+		return artworkDao.findAllArtwork();
 	}
 
 	public Wallet payment(Wallet wallet) {
