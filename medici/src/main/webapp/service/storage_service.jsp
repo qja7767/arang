@@ -80,7 +80,7 @@
           <tr>
             <td>결제할 아이디</td>
             <td>
-              <input type="text" name="userId">
+              <input type="text" name="userId" value=${userId}>
             </td>
           </tr>
           <tr>

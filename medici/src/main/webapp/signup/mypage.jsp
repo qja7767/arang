@@ -26,7 +26,7 @@
             <li><a href="/medici/list.do">Artists</a></li>
             <li><a href="/medici/list.do">Gallerys</a></li>
             <li><a href="/medici/list.do">Exhibitions</a></li>
-            <li><a href="/medici/list.do">Storage</a></li>
+            <li><a href="/medici/service/storage_service.jsp">Storage</a></li>
             <li><a href="/medici/list.do">Notice</a></li>
           </ul>
           <ul class="side_menu">

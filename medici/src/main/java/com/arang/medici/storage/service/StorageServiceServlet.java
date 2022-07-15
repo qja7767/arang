@@ -1,6 +1,7 @@
 package com.arang.medici.storage.service;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -56,6 +57,9 @@ public class StorageServiceServlet extends HttpServlet {
 		
 		artworkService.addArtwork(artwork);
 		request.setAttribute("artwork", artwork);
+		
+		List<Artwork> artworkList = artworkService.findAllArtwork();
+		request.setAttribute("artworkList", artworkList);
 		
 		dispatcher = request.getRequestDispatcher("/service/storage_sucess.jsp");
 		dispatcher.forward(request, response);

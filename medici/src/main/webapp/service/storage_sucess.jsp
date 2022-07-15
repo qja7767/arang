@@ -23,11 +23,21 @@ ${wallet.sucessMsg}<br>
   		<td align="center" width=100>작품코드</td>
   		<td align="center" width=100>유저아이디</td>
   		<td align="center" width=350>보관장소</td>
-  		<td align="center" width=100>보관시작일</td>
-  		<td align="center" width=100>보관종료일</td>
+  		<td align="center" width=100>보관기간</td>
   		<td align="center" width=100>배송 서비스 유/무</td>  		
   	</tr>
-
+	<form action="storage_service" method="post">
+	<c:forEach var="artwork" items="${artworkList}">
+  	<tr>
+		<td>${artwork.artworkNum}</td>
+		<td>${artwork.userId}</td>
+		<td>${artwork.storage}</td>
+		<td>${artwork.startPeriod} ~ ${artwork.endPeriod}</td>
+		<td>${artwork.dbService}</td>
+	</tr>
+	</c:forEach>
+	<input type="submit" value="관리"/>
+	</form>
   </table>
 </body>
 </html>

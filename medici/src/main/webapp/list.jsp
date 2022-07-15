@@ -39,6 +39,11 @@
 	</form>
 	</div>
 	
+	<form method="post" action="searchedBbs.jsp">
+	<input type="text" class="form-control pull-right" placeholder="Search" name="searchWord" />
+	<button class="btn btn-primary" type="submit">Search</button>
+	</form>
+	
   <table width="800" cellpadding="0" cellspacing="0" border=1>
   	<!-- 제목 -->
   	<tr>
