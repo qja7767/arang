@@ -16,8 +16,10 @@ public class UserDao {
 	
 	//ADD_USER
 	public void plusUser(User user) {
-		String sql = "INSERT INTO UserSignUp (userId, passwd, koreanName, ssn, email, addr)"
-				 + " VALUES (?, ?, ?, ?, ?, ?)";
+		String sql = "INSERT INTO UserSignUp (userId, passwd, koreanName, englishName, "
+				+ "ssn, acaBackGround, major, careerYear, careerType, company, portpolio,"
+				+ " mainGenre, priceAvg, salesRate, mainArtwork, phoneNumber, email, sns)"
+				 + " VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 		try {
 			Connection con = null;
 			PreparedStatement pstmt = null;	
@@ -27,9 +29,21 @@ public class UserDao {
 				pstmt.setString(1, user.getUserId());
 				pstmt.setString(2, user.getPasswd());
 				pstmt.setString(3, user.getKoreanName());
-				pstmt.setString(4, user.getSsn());
-				pstmt.setString(5, user.getEmail());
-				pstmt.setString(6, user.getAddr());
+				pstmt.setString(4, user.getEnglishName());
+				pstmt.setString(5, user.getSsn());
+				pstmt.setString(6, user.getAcaBackGround());
+				pstmt.setString(7, user.getMajor());
+				pstmt.setString(8, user.getCareerYear());
+				pstmt.setString(9, user.getCareerType());
+				pstmt.setString(10, user.getCompany());
+				pstmt.setString(11, user.getPortpolio());
+				pstmt.setString(12, user.getMainGenre());
+				pstmt.setString(13, user.getPriceAvg());
+				pstmt.setString(14, user.getSalesRate());
+				pstmt.setString(15, user.getMainArtwork());
+				pstmt.setString(16, user.getPhoneNumber());
+				pstmt.setString(17, user.getEmail());
+				pstmt.setString(18, user.getSns());
 				pstmt.executeUpdate();
 			} finally {
 				dataSource.close(pstmt, con);
@@ -100,7 +114,6 @@ public class UserDao {
 					c.setKoreanName(rs.getString("koreanName"));
 					c.setSsn(rs.getString("ssn"));
 					c.setEmail(rs.getString("email"));
-					c.setAddr(rs.getString("addr"));
 					userList.add(c);
 				}
 			}finally {

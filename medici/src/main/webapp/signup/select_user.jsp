@@ -23,8 +23,7 @@
 				<li>PASSWD : ${test.passwd}</li>
 				<li>USERNAME : ${test.koreanName}</li>
 				<li>SSN : ${test.ssn}</li>
-				<li>EMAIL : ${test.email}</li>
-				<li>ADDR : ${test.addr}</li>				
+				<li>EMAIL : ${test.email}</li>			
 			</c:forEach>	
 	</ul>
 	<div id="footer">

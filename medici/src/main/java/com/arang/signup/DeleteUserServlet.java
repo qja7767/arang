@@ -1,7 +1,7 @@
-package com.arang.signup.controller;
+package com.arang.signup;
 
 import java.io.IOException;
-import java.util.List;
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -9,39 +9,30 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.arang.signup.User;
-import com.arang.signup.UserDao;
-import com.arang.signup.UserService;
-
-
-@WebServlet("/signup/update_user.do")
-public class UpdateUserServlet extends HttpServlet {
+@WebServlet("/signup/delete_user.do")
+public class DeleteUserServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	private UserService userservice;
 	
-	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
 		
-		String passwd = request.getParameter("passwd");
-		String koreanName = request.getParameter("koreanName");
 		String userId = request.getParameter("userId");
 		
 		UserService userService = UserService.getInstance();
 		userService = new UserService(new UserDao());		
 		User user = new User();
-		user.setPasswd(passwd);
-		user.setKoreanName(koreanName);
 		user.setUserId(userId);
+		System.out.println(user.getUserId());
 		
-		userService.updateUser(user);
+		userService.deleteUserByUserId(user);
 		request.setAttribute("user", user);
 		
 		RequestDispatcher dispatcher = null;
-		dispatcher = request.getRequestDispatcher("/signup/update_user.jsp");
+		dispatcher = request.getRequestDispatcher("/mod009/delete_user.jsp");
 		dispatcher.forward(request, response);	
 	}
-
 
 }

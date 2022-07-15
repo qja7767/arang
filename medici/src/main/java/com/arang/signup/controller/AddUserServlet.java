@@ -37,12 +37,24 @@ public class AddUserServlet extends HttpServlet {
 		String userId = request.getParameter("userId");
 		String passwd = request.getParameter("passwd");
 		String koreanName = request.getParameter("koreanName");
-		String ssn = request.getParameter("ssn");
-		String email1 = request.getParameter("email1");
-		String email2 = request.getParameter("email2");
-		String addr1 = request.getParameter("addr1");
-		String addr2 = request.getParameter("addr2");
-		
+		String englishName = request.getParameter("englishName");
+		String ssnYear = request.getParameter("ssnYear");
+		String ssnMonth = request.getParameter("ssnMonth");
+		String ssnDay = request.getParameter("ssnDay");
+		String acaBackGround = request.getParameter("acaBackGround");
+		String major = request.getParameter("major");
+		String careerYear = request.getParameter("careerYear");
+		String careerType = request.getParameter("careerType");
+		String company = request.getParameter("company");
+		String portpolio = request.getParameter("portpolio");
+		String mainGenre = request.getParameter("mainGenre");
+		String priceAvg = request.getParameter("priceAvg");
+		String salesRate = request.getParameter("salesRate");
+		String mainArtwork = request.getParameter("mainArtwork");
+		String phoneNumber = request.getParameter("phoneNumber");
+		String email = request.getParameter("email");
+		String sns = request.getParameter("sns");
+
 		//2. 유효성 검증 및 변환
 		List<String> errorMsgs = new ArrayList<>();
 		if(userId == null || userId.length() == 0) {
@@ -62,9 +74,20 @@ public class AddUserServlet extends HttpServlet {
 		user.setUserId(userId);
 		user.setPasswd(passwd);
 		user.setKoreanName(koreanName);
-		user.setSsn(ssn);
-		user.setEmail(email1 + "@" + email2);
-		user.setAddr(addr1 + " " + addr2);
+		user.setEnglishName(englishName);
+		user.setSsn(ssnYear + ssnMonth + ssnDay);
+		user.setAcaBackGround(acaBackGround);
+		user.setMajor(major);
+		user.setCareerYear(careerYear);
+		user.setCareerType(careerType);
+		user.setCompany(company);
+		user.setPortpolio(portpolio);
+		user.setMainGenre(mainGenre);
+		user.setPriceAvg(priceAvg);
+		user.setSalesRate(salesRate);
+		user.setMainArtwork(mainArtwork);
+		user.setPhoneNumber(phoneNumber);
+		user.setEmail(email);
 		
 		//3. 비즈니스 서비스 호출
 		userService.addUser(user);
@@ -75,9 +98,8 @@ public class AddUserServlet extends HttpServlet {
 		request.setAttribute("koreanName", koreanName);
 		request.setAttribute("passwd", passwd);
 		request.setAttribute("userId", userId);
-		request.setAttribute("ssn", ssn);
 		
-		dispatcher = request.getRequestDispatcher("/signup/mypage.jsp");
+		dispatcher = request.getRequestDispatcher("/signup/success.jsp");
 		dispatcher.forward(request, response);	
 	}
 		
