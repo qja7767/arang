@@ -14,11 +14,9 @@ pageEncoding="UTF-8"%>
 	<div id="header">
 		<jsp:include page="/incl/banner.jsp">
 			<jsp:param name="subtitle" value="TEST SUBTITLE"/>
-		</jsp:include>
-	</div>
-	<div id="content-wrapper">
+r usjsp:incluw com.medici.arang.signup.Us"content-wrapper">
 		<h3>회원가입 되었습니다.</h3>
-		<jsp:useBean id="user" class="com.arang.signup.User" scope="request"/>
+		<jsp:useBean id="user" class="com.medici.arang.signup.User" scope="request"/>
 		아이디 : <jsp:getProperty property="userId" name="user"/>
 		이름 : <jsp:getProperty property="koreanName" name="user"/>
     </div>

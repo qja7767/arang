@@ -2,9 +2,9 @@
     pageEncoding="UTF-8"%>
 <%@page isELIgnored="false" %>
 <%@page import="java.util.*"%>
-<%@page import="com.arang.board.dto.*"%>
-<%@page import="com.arang.board.cmd.*"%>
-<%@page import="com.arang.board.dao.*"%>
+<%@page import="com.arang.medici.board.dto.*"%>
+<%@page import="com.arang.medici.board.cmd.*"%>
+<%@page import="com.arang.medici.board.dao.*"%>
 
 
 <%
@@ -34,7 +34,7 @@
 			<label>검색어</label>
 			<input type="text" name="q" value=""/>
 			<input type="submit" value="검색"/>
-			<a href='<c:url value="/signup/mypage.jsp"/>'>HOME TEST</a><br>
+			<a href='<c:url value="/signup/mypage.jsp"/>'>메인페이지로</a><br>
 	</fieldset>
 	</form>
 	</div>

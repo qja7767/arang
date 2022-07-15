@@ -20,7 +20,7 @@
 		<form action="write.do" method="post">
 			<tr>
 				<td>이름</td>
-				<td><input type="text" name="bName" size="20"/></td>
+				<td><input type="text" name="bName" size="20" value="${userId}" readonly/></td>
 			</tr>
 			<tr>
 				<td>제목</td>

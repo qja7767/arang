@@ -2,9 +2,9 @@
     pageEncoding="UTF-8"%>
 <%@page isELIgnored="false" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<link rel="stylesheet" href="../design/css/normalize.css">
-<link rel="stylesheet" href="../design/css/default.css">
-<link rel="stylesheet" href="../design/css/style.css">
+<link rel="stylesheet" href="../design/css_login/normalize.css">
+<link rel="stylesheet" href="../design/css_login/default.css">
+<link rel="stylesheet" href="../design/css_login/style.css">
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,7 +17,7 @@
       <div class="inner">
         <!-- 로고 -->
         <h1 id="top-logo">
-          <a href="index.html">ARANG</a>
+          <a href='<c:url value="/signup/mypage.jsp"/>'>ARANG</a>
         </h1>
         <!-- 메인메뉴 -->
         <nav id="top-nav">
@@ -44,7 +44,7 @@
             <li><a href="./mypage/mypage.html"><img src="../img/icon/mypage.png" alt="mypage"></a></li>
             <li><a href="./like/like.html"><img src="../img/icon/like.png" alt="like"></a></li>
             <li><a href="./cart/cart.html"><img src="../img/icon/cart.png" alt="cart"></a></li>
-            <li><a href="login.html">login</a></li>
+            <li><a href="login">login</a></li>
           </ul>
         </nav>
       </div>
@@ -67,12 +67,13 @@
           </tr>
         </table>
         <div class="button-group">
-          <button class="gbtn normal">로그인</button>
-          <button class="gbtn normal gray">취소</button>
+          <button class="gbtn normal">로그인</button>                         
         </div>
         <div class="join">
           <p>아직 회원이 아니신가요?&nbsp;&nbsp;</p>
           <a href='<c:url value="/signup/add_user_db.jsp"/>'><strong>회원가입<strong></a>
+          <p>비회원으로 보겠습니다 ->&nbsp;&nbsp;</p>
+          <a href='<c:url value="/signup/mypage.jsp"/>'>메인으로</a>
         </div>
       </form>
     </div>
