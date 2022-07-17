@@ -23,29 +23,27 @@
         <!-- 메인메뉴 -->
         <nav id="top-nav">
           <ul class="center_menu">
-            <li><a href="../subpage/artists/artists.html">Artists</a></li>
-            <li><a href="../subpage/gallerys/gallerys.html">Gallerys</a></li>
-            <li><a href="../subpage/exhibitions/exhibitions.html">Exhibitions</a></li>
-            <li><a href="../subpage/storage/storage.html">Storage</a></li>
-            <li><a href="../subpage/notice/notice.html">Notice</a></li>
+            <li><a href="/medici/list.do">Artists</a></li>
+            <li><a href="/medici/list.do">Gallerys</a></li>
+            <li><a href="/medici/list.do">Exhibitions</a></li>
+            <li><a href="/medici/service/storage_service.jsp">Storage</a></li>
+            <li><a href="/medici/list.do">Notice</a></li>
           </ul>
-          <ul class="side_menu">          	
-        	<c:if test="${userId==null}">
-        	<a href='<c:url value="/signup/login"/>'>로그인</a><br>
-			<a href='<c:url value="/signup/add_user_db.jsp"/>'>유저회원가입</a><br>
+          <ul class="side_menu">
+			<c:if test="${userId==null}">
+        	<li><a href='<c:url value="/signup/login"/>'>login</a><br></li>
+			<a href='<c:url value="/signup/add_user_db.jsp"/>'>회원가입</a><br>
         	</c:if>
             <c:if test="${userId!=null}">
-            ${userId}님 환영합니다. 
-			<label>Last Access Time : </label> ${lastAccessTime}
-          	<a href='<c:url value="/signup/logout"/>'>로그아웃</a><br>
-			<a href='<c:url value="/signup/delete_user.jsp"/>'>유저삭제</a><br>
-			<a href='<c:url value="/signup/update_user.jsp"/>'>유저수정</a><br>
+            ${userId}님
+          	<li><a href='<c:url value="/signup/logout"/>'>logout</a><br></li>
+			<li><a href='<c:url value="/signup/delete_user.jsp"/>'>삭제</a><br></li>
+			<li><a href='<c:url value="/signup/update_user.jsp"/>'>수정</a><br></li>
          	</c:if>
             <c:if test="${userId!=null&&userId=='admin'}">
 			<h3>관리자 계정입니다.</h3>
-			<a href='<c:url value="/signup/select_user.do"/>'>모든가입유저조회</a><br>
+			<a href='<c:url value="/signup/select_user.do"/>'>조회</a><br>
         	</c:if>
-            <li>D</li>
             <li><a href="#"><img class="top-img" src="../img/find.png"></a></li>
             <li><a href="#"><img class="top-img" src="../img/mypage.png"></a></li>
             <li><a href="#"><img class="top-img" src="../img/like.png"></a></li>

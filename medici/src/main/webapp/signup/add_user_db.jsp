@@ -85,8 +85,8 @@
             <em>&ast;</em>생년월일
           </td>
           <td>
-            <select id="yearBox" class="middle"></select><p>&nbsp;년&nbsp;</p>
-            <select class="middle">
+            <select id="yearBox" class="middle" name="ssnYear"></select><p>&nbsp;년&nbsp;</p>
+            <select class="middle" name="ssnMonth">
               <option value="1월">1</option>
               <option value="2월">2</option>
               <option value="3월">3</option>
@@ -100,7 +100,7 @@
               <option value="11월">11</option>
               <option value="12월">12</option>
             </select><p>&nbsp;월&nbsp;</p>
-            <select class="middle">
+            <select class="middle" name="ssnDay">
               <option value="1일">1</option>
               <option value="2일">2</option>
               <option value="3일">3</option>
@@ -140,12 +140,12 @@
             <em>&ast;</em>최종 학력
           </td>
           <td>
-            <label for="ck"><input type="checkbox" id="ck" name="ck">&nbsp;&nbsp;고등학교졸업이하&nbsp;&nbsp;</label>
-            <label for="ck"><input type="checkbox" id="ck" name="ck">&nbsp;&nbsp;고등학교졸업&nbsp;&nbsp;</label>
-            <label for="ck"><input type="checkbox" id="ck" name="ck">&nbsp;&nbsp;대학교졸업(2,3년제)&nbsp;&nbsp;</label>
-            <label for="ck"><input type="checkbox" id="ck" name="ck">&nbsp;&nbsp;대학교졸업(4년제)&nbsp;&nbsp;</label>
-            <label for="ck"><input type="checkbox" id="ck" name="ck">&nbsp;&nbsp;대학원 석사졸업&nbsp;&nbsp;</label>
-            <label for="ck"><input type="checkbox" id="ck" name="ck">&nbsp;&nbsp;대학원 박사졸업&nbsp;&nbsp;</label>
+            <label for="ck"><input type="radio" id="ck" name="ck">&nbsp;&nbsp;고등학교졸업이하&nbsp;&nbsp;</label>
+            <label for="ck"><input type="radio" id="ck" name="ck">&nbsp;&nbsp;고등학교졸업&nbsp;&nbsp;</label>
+            <label for="ck"><input type="radio" id="ck" name="ck">&nbsp;&nbsp;대학교졸업(2,3년제)&nbsp;&nbsp;</label>
+            <label for="ck"><input type="radio" id="ck" name="ck">&nbsp;&nbsp;대학교졸업(4년제)&nbsp;&nbsp;</label>
+            <label for="ck"><input type="radio" id="ck" name="ck">&nbsp;&nbsp;대학원 석사졸업&nbsp;&nbsp;</label>
+            <label for="ck"><input type="radio" id="ck" name="ck">&nbsp;&nbsp;대학원 박사졸업&nbsp;&nbsp;</label>
           </td>
         </tr>
         <tr>
@@ -161,11 +161,11 @@
             <em>&ast;</em>경력연도
           </td>
           <td>
-            <label><input type="checkbox">&nbsp;&nbsp;1년이하&nbsp;&nbsp;</label>
-            <label><input type="checkbox">&nbsp;&nbsp;1~3년&nbsp;&nbsp;</label>
-            <label><input type="checkbox">&nbsp;&nbsp;3~5년&nbsp;&nbsp;</label>
-            <label><input type="checkbox">&nbsp;&nbsp;5~10년&nbsp;&nbsp;</label>
-            <label><input type="checkbox">&nbsp;&nbsp;10년이상&nbsp;&nbsp;</label>
+            <label for="careerYear"><input type="radio" name="careerYear">&nbsp;&nbsp;1년이하&nbsp;&nbsp;</label>
+            <label for="careerYear"><input type="radio" name="careerYear">&nbsp;&nbsp;1~3년&nbsp;&nbsp;</label>
+            <label for="careerYear"><input type="radio" name="careerYear">&nbsp;&nbsp;3~5년&nbsp;&nbsp;</label>
+            <label for="careerYear"><input type="radio" name="careerYear">&nbsp;&nbsp;5~10년&nbsp;&nbsp;</label>
+            <label for="careerYear"><input type="radio" name="careerYear">&nbsp;&nbsp;10년이상&nbsp;&nbsp;</label>
           </td>
         </tr>
         <tr>
@@ -173,9 +173,9 @@
             <em>&ast;</em>경력사항
           </td>
           <td>
-            <label><input type="checkbox">&nbsp;&nbsp;개인전&nbsp;&nbsp;</label>
-            <label><input type="checkbox">&nbsp;&nbsp;단체전&nbsp;&nbsp;</label>
-            <label><input type="checkbox">&nbsp;&nbsp;기타&nbsp;&nbsp;</label>
+            <label for="careerType"><input type="radio" name="careerType">&nbsp;&nbsp;개인전&nbsp;&nbsp;</label>
+            <label for="careerType"><input type="radio" name="careerType">&nbsp;&nbsp;단체전&nbsp;&nbsp;</label>
+            <label for="careerType"><input type="radio" name="careerType">&nbsp;&nbsp;기타&nbsp;&nbsp;</label>
           </td>
         </tr>
         <tr>
@@ -183,8 +183,8 @@
             <em>&ast;</em>갤러리 소속 여부
           </td>
           <td>
-            <label><input type="checkbox">&nbsp;&nbsp;O&nbsp;&nbsp;</label>
-            <label><input type="checkbox">&nbsp;&nbsp;X&nbsp;&nbsp;</label>
+            <label for="company"><input type="radio" name="company">&nbsp;&nbsp;O&nbsp;&nbsp;</label>
+            <label for="company"><input type="radio" name="company">&nbsp;&nbsp;X&nbsp;&nbsp;</label>
           </td>
         </tr>
         <tr>
@@ -225,10 +225,10 @@
             <em>&ast;</em>지난 1년간 작품 판매 횟수
           </td>
           <td>
-            <label><input type="checkbox">&nbsp;없음&nbsp;</label>
-            <label><input type="checkbox">&nbsp;1~3개&nbsp;</label>
-            <label><input type="checkbox">&nbsp;3~5개&nbsp;</label>
-            <label><input type="checkbox">&nbsp;5개이상&nbsp;</label>
+            <label label for="salesRate"><input type="radio" name="salesRate">&nbsp;없음&nbsp;</label>
+            <label label for="salesRate"><input type="radio" name="salesRate">&nbsp;1~3개&nbsp;</label>
+            <label label for="salesRate"><input type="radio" name="salesRate">&nbsp;3~5개&nbsp;</label>
+            <label label for="salesRate"><input type="radio" name="salesRate">&nbsp;5개이상&nbsp;</label>
           </td>
         </tr>
         <tr>
@@ -268,6 +268,7 @@
       <p class="bot-p"><input type="checkbox">본인은 이 양식에 제공된 정보가 진실하고 완전하며 정확하다는 것을 확인합니다.</p>
       <div class="button-group">
         <button class="gbtn normal">제출</button>
+        <a href='<c:url value="/signup/mypage.jsp"/>'>
         <button class="gbtn normal gray"><a href='<c:url value="/signup/mypage.jsp"/>'>취소</a></button>
       </div>
     </form>
